@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <h1 class = "bold white">집 가고 싶어요</h1>
+    <h1 id = "titlemsg" class = "bold yellow" style = "font-size: 400%;">3층 올라가면 기숙사에 디미충 나옴</h1>
     <h1 class = "white" id = "date" class = "date"></h1><br>
     <div id = "time" class = "time"></div><br>
     <h1 class = "white one">야자 1타임: 19:50~21:10</h1>
@@ -57,15 +57,28 @@
             document.getElementById("date").innerHTML = timeDisplay;
 
             dateInfo.getHours()
-            switch(dateInfo.getHours()) {
-                case 19: {
-                    if(50 <= dateInfo.getMinutes() && dateInfo.getMinutes() <= 59) {
-                        document.getElementsByClassName('one')
-                    }
+            if(hour === 20){
+                if(min === 42){
+                    $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
                 }
-
-                case 21: {
-                    
+            }
+            if(hour === 21){
+                if(min === 10){
+                    $("#titlemsg").html("쉬는시간입니다!");
+                }
+                if(min === 11){
+                    $("#titlemsg").html("윤석현은 게이다");
+                }
+                if(min === 12){
+                    $("#titlemsg").html("Wa! 쉬는시간입니다!");
+                }
+                if(min === 30){
+                    $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
+                }
+            }
+            if(hour === 22){
+                if(min === 00){
+                    $("#titlemsg").html("자러 갈 시간이에요^^");
                 }
             }
         }
