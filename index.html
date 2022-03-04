@@ -30,12 +30,13 @@
     </style>
 </head>
 <body>
-    <h1 id = "titlemsg" class = "bold yellow" style = "font-size: 400%;">Wa! 쉬는시간입니다!</h1>
+    <h1 id = "titlemsg" class = "bold yellow" style = "font-size: 400%;">쉬는시간 / 일베 키면 사랑해버릴거임</h1>
     <h1 class = "white" id = "date" class = "date"></h1><br>
     <div id = "time" class = "time"></div><br>
     <h1 class = "white one">야자 1타임: 19:50~21:10</h1>
     <h1 class = "white rest">휴식(매점 개방): 21:10~21:30</h1>
-    <h1 class = "white two">야자 2타임: 21:30~22:00</h1>
+    <h1 class = "white two">야자 2타임: 21:30~22:00</h1><br><br>
+    <h4 class = "white">제작: WP 홍은표</h4>
 
     <script>
         function setClock(){
@@ -71,6 +72,9 @@
                 }
                 if(min === 12){
                     $("#titlemsg").html("Wa! 쉬는시간입니다!");
+                }
+                if(min == 29){
+                    $("#titlemsg").html("쉬는시간 / 일베 키면 죽여버릴거임");
                 }
                 if(min === 30){
                     $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
