@@ -229,9 +229,30 @@
                     hidePopup();
                     $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
                 }
+            }
+            if(hour*1 === 17){
+                $("#startTime").html("16:20");
+                $("#endTime").html("18:00");
+                $("#timeName").html("자습T4");
+                if(0 <= min*1 && min*1 <= 14){
+                    hidePopup();
+                    $("#titlemsg").html("아 테스형 세상이 왜이래 왜이렇게 힘들어");
+                }
+                if(15 <= min*1 && min*1 <= 29){
+                    hidePopup();
+                    $("#titlemsg").html("아직도 Jquery를 쓰는 사람이 있다?! 뿌슝빠슝");
+                }
+                if(30 <= min*1 && min*1 <= 44){
+                    hidePopup();
+                    $("#titlemsg").html("Jquery is love");
+                }
+                if(45 <= min*1 && min*1 <= 58){
+                    hidePopup();
+                    $("#titlemsg").html("해방 나쁜 표절충들");
+                }
                 if(min*1 === 59){
                     showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>석식시간</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
             }
