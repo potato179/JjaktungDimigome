@@ -96,7 +96,7 @@
                 }
             }
             if(hour*1 === 11){
-                if(min*1 === 0){
+                if(0 <= min*1 && min*1 <= 9){
                     $("#titlemsg").html("어쩔티비");
                 }
                 if(10 <= min*1 && min*1 <= 19){
