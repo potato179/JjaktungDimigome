@@ -17,10 +17,6 @@
         *{
             text-align: center;
             position: relative;
-            top: 50px;
-        }
-        body{
-            background-color: rgb(61, 61, 61);
         }
         .time{
             font-size: 100px;
@@ -29,7 +25,8 @@
         }
     </style>
 </head>
-<body>
+<body style = "background-color: rgb(61, 61, 61);">
+    <br><br><br>
     <h1 id = "titlemsg" class = "bold yellow" style = "font-size: 400%;">즐거운 토요일!</h1>
     <h1 class = "white" id = "date" class = "date"></h1><br>
     <div id = "time" class = "time"></div><br>
@@ -61,6 +58,13 @@
             document.getElementById("date").innerHTML = timeDisplay;
 
             dateInfo.getHours()
+
+            if(hour*1 === 9){
+                if(min*1 === 7){
+                    $("#titlemsg").html("왜 배경색이 변하지 않을까");
+                    $("body").css("background-color", "blue")                
+                }
+            }
             if(hour === 20){
                 if(min === 42){
                     $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
@@ -95,17 +99,21 @@
                 }
             }
         }
+
         function modifyNumber(time){
-        if(parseInt(time) < 10){
-            return "0" + time;
+            if(parseInt(time) < 10){
+                return "0" + time;
+            }
+            else{
+                return time;
+            }
         }
-        else
-            return time;
-        }
+
         window.onload = function(){
             setClock();
             setInterval(setClock, 1000);
         }
+
         function notify(message){
 
         }
