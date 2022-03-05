@@ -33,8 +33,9 @@
     <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">즐거운데 즐겁지 않은 토요일!</p>
     <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1><br>
     <div id = "time" class = "time" style = "display: block;">시계</div><br>
-    <i class="fa-solid fa-angles-right"></i>
-    <h1 class = "white" style = "display: block;"><span id = "startTime"></span><i class="fa-solid fa-angles-right"></i><span id = "timeName"></span><i class="fa-solid fa-angles-right"></i><span id = "endTime"></span></h1><br><br>
+    <!--
+    <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span><i class="fa-solid fa-angles-right"></i><span id = "timeName">NNNN</span><i class="fa-solid fa-angles-right"></i><span id = "endTime">EEEE</span></h1><br><br>
+    -->
     <h4 class = "white">제작: WP 홍은표</h4>
     <h4 class = "red">본 사이트는 디미고미 사용 시작일인 4월 1일에 운영 종료 예정입니다.</h4>
 
@@ -98,8 +99,11 @@
                 if(min*1 === 0){
                     $("#titlemsg").html("어쩔티비");
                 }
-                if(10 <= min*1 && min*1 <= 29){
+                if(10 <= min*1 && min*1 <= 19){
                     $("#titlemsg").html("얘들아 롤 꺼라");
+                }
+                if(20 <= min*1 && min*1 <= 29){
+                    $("#titlemsg").html("다들 스물다섯 스물하나 보세요");
                 }
                 if(min*1 === 30){
                     $("#titlemsg").html("배고프다");
