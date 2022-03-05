@@ -147,11 +147,15 @@
                 $("#timeName").html("점심시간");
             }
             if(hour*1 === 14){
-                if(0 <= min*1){
+                if(0 <= min*1 && min*1 <= 14){
                     hidePopup();
                     $("#titlemsg").html("즐거운 자습시간이에요");
                 }
-                if(min*1 === 30){
+                if(15 <= min*1 && min*1 <= 29){
+                    hidePopup();
+                    $("#titlemsg").html("웹플이 최고다");
+                }
+                if(30 <= min*1 && min*1 <= 59){
                     hidePopup();
                     $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
                 }
