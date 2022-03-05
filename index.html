@@ -34,7 +34,8 @@
     <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">접속오류! 문의주세요.</p>
     <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1><br>
     <div id = "time" class = "time" style = "display: block;">시계</div><br>
-    <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">저런.. 중간접속을 해버린 것 같네요.</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1><br><br>
+    <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">저런.. 중간접속을 해버린 것 같네요.</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1>
+    <h1 class = "white"><i class="far fa-clock"></i>&nbsp;<span id = "timeleft">0</span>분</h1><br><br>
     <h4 class = "white">제작: WP 홍은표</h4>
     <h4 class = "red">섭종 D-2</h4>
 
@@ -231,9 +232,19 @@
                 }
             }
             if(hour*1 === 17){
+
                 $("#startTime").html("16:20");
                 $("#endTime").html("18:00");
                 $("#timeName").html("자습T4");
+
+                let endHour = 18;
+                let endMin = 0;
+                if(endHour === hour*1){
+                    $("#timeleft").html(endMin - min*1);
+                }
+                else{
+                    $("#timeleft").html(endHour - hour*1 + 60 - min*1);
+                }
                 if(0 <= min*1 && min*1 <= 14){
                     hidePopup();
                     $("#titlemsg").html("아 테스형 세상이 왜이래 왜이렇게 힘들어");
