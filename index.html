@@ -31,13 +31,13 @@
     <br><br><br><br><br><br>
     <div id = "nmsg1" class = "bold white" style = "display: none; font-size: 500%;">1</div>
     <div id = "nmsg2" class = "bold white" style = "display: none; font-size: 500%;">2</div>
-    <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">접속오류! 문의주세요.</p>
+    <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">짭미고미 조기 섭종, 짭짭미고미 많은 관심 부탁드립니다.</p>
     <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1><br>
     <div id = "time" class = "time" style = "display: block;">시계</div><br>
     <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">저런.. 중간접속을 해버린 것 같네요.</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1>
     <h1 class = "white"><i class="far fa-clock"></i>&nbsp;<span id = "timeleft">0</span>분</h1><br><br>
     <h4 class = "white">제작: WP 홍은표</h4>
-    <h4 class = "red">섭종 D-2</h4>
+    <h4 class = "red">본 사이트는 운영이 종료되었습니다.</h4>
 
     <script>
         function setClock(){
@@ -61,255 +61,6 @@
             document.getElementById("date").innerHTML = timeDisplay;
 
             dateInfo.getHours()
-
-            if(hour*1 === 10){
-                if(min*1 <= 18){
-                    hidePopup();
-                    $("#titlemsg").html("즐겁지 않은 토요일이에요!");
-                }
-                if(min*1 === 19){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                if(20 <= min*1 && min*1 <= 39){
-                    hidePopup();
-                    $("#titlemsg").html("Wa! 휴식시간!");
-                }
-                if(min*1 === 39){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습T2</span>가 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                if(min*1 === 40){
-                    hidePopup();
-                    $("#titlemsg").html("즐거운 자습시간이에요");
-                }
-                if(min*1 === 41){
-                    $("#titlemsg").html("즐거운 코딩시간이에요");
-                }
-                if(min*1 === 44){
-                    $("#titlemsg").html("DC 이혜윤 여신아님");
-                }
-                if(45 <= min*1){
-                    $("#titlemsg").html("즐거운 자습시간이에요");
-                }
-            }
-            if(hour*1 === 11){
-                if(0 <= min*1 && min*1 <= 9){
-                    $("#titlemsg").html("어쩔티비");
-                }
-                if(10 <= min*1 && min*1 <= 19){
-                    $("#titlemsg").html("얘들아 롤 꺼라");
-                }
-                if(20 <= min*1 && min*1 <= 29){
-                    $("#titlemsg").html("다들 스물다섯 스물하나 보세요");
-                }
-                if(30 <= min*1 && min*1 <= 58){
-                    $("#titlemsg").html("배고프다");
-                }
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>점심시간</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                $("#startTime").html("10:40");
-                $("#endTime").html("12:00");
-                $("#timeName").html("자습T2");
-            }
-            if(hour*1 === 12){
-                if(min*1 <= 2){
-                    hidePopup();
-                    $("#titlemsg").html("14시까지 교실 또는 야외에서 코로나 자가검사를 해 주세요!!");
-                }
-                if(min*1 === 3){
-                    hidePopup();
-                    $("#titlemsg").html("HD 최재민 다구리 시간");
-                }
-                if(min*1 === 5){
-                    hidePopup();
-                    $("#titlemsg").html("즐거운 점심시간이에요");
-                }
-                if(6 <= min*1 && min*1 <= 59){
-                    hidePopup();
-                    $("#titlemsg").html("14시까지 교실 또는 야외에서 코로나 자가검사를 해 주세요!!");
-                }
-                $("#startTime").html("12:00");
-                $("#endTime").html("14:00");
-                $("#timeName").html("점심시간");
-            }
-            if(hour*1 === 13){
-                if(0 <= min*1 && min*1 <= 57){
-                    hidePopup();
-                    $("#titlemsg").html("14시까지 교실 또는 야외에서 코로나 자가검사를 해 주세요!!");
-                }
-                if(min*1 === 58){
-                    $("#titlemsg").html("문구 변경을 위해 5분 간격으로 새로고침하도록 패치하였습니다.")
-                }
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습T3</span>가 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                $("#startTime").html("12:00");
-                $("#endTime").html("14:00");
-                $("#timeName").html("점심시간");
-            }
-            if(hour*1 === 14){
-                if(0 <= min*1 && min*1 <= 14){
-                    hidePopup();
-                    $("#titlemsg").html("즐거운 자습시간이에요");
-                }
-                if(15 <= min*1 && min*1 <= 29){
-                    hidePopup();
-                    $("#titlemsg").html("웹플이 최고다");
-                }
-                if(30 <= min*1 && min*1 <= 44){
-                    hidePopup();
-                    $("#titlemsg").html("HTML is programming Language");
-                }
-                if(45 <= min*1 && min*1 <= 59){
-                    hidePopup();
-                    $("#titlemsg").html("JAVA != JAVASCRIPT");
-                }
-                $("#startTime").html("14:00");
-                $("#endTime").html("16:00");
-                $("#timeName").html("자습T3");
-            }
-            if(hour*1 === 15){
-                if(0 <= min*1 && min*1 <= 14){
-                    hidePopup();
-                    $("#titlemsg").html("집가고 싶어요");
-                }
-                if(15 <= min*1 && min*1 <= 29){
-                    hidePopup();
-                    $("#titlemsg").html("뛰쳐나오고 싶어요");
-                }
-                if(30 <= min*1 && min*1 <= 44){
-                    hidePopup();
-                    $("#titlemsg").html("살려주세요");
-                }
-                if(45 <= min*1 && min*1 <= 58){
-                    hidePopup();
-                    $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
-                }
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                $("#startTime").html("14:00");
-                $("#endTime").html("16:00");
-                $("#timeName").html("자습T3");
-            }
-            if(hour*1 === 16){
-                if(0 <= min*1 && min*1 <= 18){
-                    hidePopup();
-                    $("#titlemsg").html("Wa! 휴식시간!");
-                    $("#startTime").html("16:00");
-                    $("#endTime").html("16:20");
-                    $("#timeName").html("휴식시간");
-                }
-                if(min*1 === 19){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습T4</span>가 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                if(20 <= min*1 && min*1 <= 59){
-                    hidePopup();
-                    $("#titlemsg").html("즐겁지 않은 자습시간");
-                    $("#startTime").html("16:20");
-                    $("#endTime").html("18:00");
-                    $("#timeName").html("자습T4");
-                }
-                if(30 <= min*1 && min*1 <= 44){
-                    hidePopup();
-                    $("#titlemsg").html("살려주세요");
-                }
-                if(45 <= min*1 && min*1 <= 58){
-                    hidePopup();
-                    $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
-                }
-            }
-            if(hour*1 === 17){
-                endTime(18, 0, hour, min)
-                $("#startTime").html("16:20");
-                $("#endTime").html("18:00");
-                $("#timeName").html("자습T4");
-                if(0 <= min*1 && min*1 <= 14){
-                    hidePopup();
-                    $("#titlemsg").html("아 테스형 세상이 왜이래 왜이렇게 힘들어");
-                }
-                if(15 <= min*1 && min*1 <= 29){
-                    hidePopup();
-                    $("#titlemsg").html("아직도 Jquery를 쓰는 사람이 있다?! 뿌슝빠슝");
-                }
-                if(30 <= min*1 && min*1 <= 44){
-                    hidePopup();
-                    $("#titlemsg").html("Jquery is love");
-                }
-                if(45 <= min*1 && min*1 <= 58){
-                    hidePopup();
-                    $("#titlemsg").html("해방 나쁜 표절충들");
-                }
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>석식시간</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-            }
-            if(hour*1 === 18 || hour*1 === 19){
-                endTime(20, 0, hour, min);
-                $("#startTime").html("18:00");
-                $("#endTime").html("20:00");
-                $("#timeName").html("석식");
-                hidePopup();
-                $("#titlemsg").html("살찌는 저녁시간!");
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습5T</span>가 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-            }
-            if(hour*1 === 20){
-                endTime(22, 0, hour, min);
-                $("#startTime").html("20:00");
-                $("#endTime").html("22:00");
-                $("#timeName").html("자습5T");
-                hidePopup();
-                $("#titlemsg").html("졸린 자습시간");
-                if(min*1 === 29){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>식사이동</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-            }
-            if(hour === 21){
-                if(min === 10){
-                    $("#titlemsg").html("쉬는시간입니다!");
-                }
-                if(min === 11){
-                    $("#titlemsg").html("윤석현은 게이다");
-                }
-                if(min === 12){
-                    $("#titlemsg").html("Wa! 쉬는시간입니다!");
-                }
-                if(min == 29){
-                    $("#titlemsg").html("쉬는시간 / 일베 키면 죽여버릴거임");
-                }
-                if(min === 30){
-                    $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
-                }
-                
-                if(min === 45){
-                    $("#titlemsg").html("집 가고 싶어요");
-                }
-            }
-            if(hour === 22){
-                if(min === 00){
-                    $("#titlemsg").html("자러 갈 시간이에요^^");
-                }
-            }
         }
 
         function modifyNumber(time){
@@ -326,7 +77,7 @@
                 $("#timeleft").html(endMin - min*1 - 1);
             }
             else{
-                $("#timeleft").html((endHour - hour*1)*60 - min*1 - 1);
+                $("#timeleft").html((endHour - hour*1)60 - min*1 - 1);
             }
         }
 
