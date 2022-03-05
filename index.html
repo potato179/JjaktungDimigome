@@ -25,14 +25,14 @@
         }
     </style>
 </head>
-<body style = "background-color: rgb(61, 61, 61);">
+<body style = "background-color: #3d3d3d;">
     <br><br><br><br><br><br>
-    <div id = "nmsg1" class = "bold" style = "display: none; font-size: 400%;">1</div>
-    <div id = "nmsg2" class = "bold" style = "display: none; font-size: 400%;">2</div>
-    <div id = "nmsg3" class = "bold" style = "display: none; font-size: 400%;">3</div>
+    <div id = "nmsg1" class = "bold white" style = "display: none; font-size: 500%;">1</div>
+    <div id = "nmsg2" class = "bold white" style = "display: none; font-size: 500%;">2</div>
+    <div id = "nmsg3" class = "bold white" style = "display: none; font-size: 500%;">3</div>
     <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">즐거운데 즐겁지 않은 토요일!</p>
-    <h1 class = "white" id = "date" class = "date"></h1><br>
-    <div id = "time" class = "time"></div><br>
+    <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1><br>
+    <div id = "time" class = "time" style = "display: block;">시계</div><br>
     <h1 class = "white one"></h1>
     <h1 class = "white rest"></h1>
     <h1 class = "white two"></h1><br><br>
@@ -55,17 +55,22 @@
             dateDisplay = `${hour}:${min}:${sec}`;
             timeDisplay = `${year}년 ${month}월 ${date}일`;
 
-            var msgList = [""]
+            var msgList = [""];
 
             document.getElementById("time").innerHTML = dateDisplay;
             document.getElementById("date").innerHTML = timeDisplay;
 
             dateInfo.getHours()
 
-            if(hour*1 === 9){
-                if(min*1 === 7){
-                    $("#titlemsg").html("왜 배경색이 변하지 않을까");
-                    $("body").css("background-color", "blue")                
+            if(hour*1 === 10){
+                if(min*1 === 20){
+                    $("#nmsg1").html("<span class = 'yellow'>휴식시간</span>이 시작되었습니다.");
+                    $("#nmsg2").html("감사합니다.");
+                    $("#nmsg3").html("");
+                    showPopup();
+                }
+                if(min*1 === 21){
+                    hide();
                 }
             }
             if(hour === 20){
@@ -110,6 +115,26 @@
             else{
                 return time;
             }
+        }
+
+        function showPopup(){
+            $("body").css("background-color", "blue");
+            $("#nmsg1").css("display", "block");
+            $("#nmsg2").css("display", "block");
+            $("#nmsg3").css("display", "block");
+            $("#titlemsg").css("display", "none");
+            $("#date").css("display", "none");
+            $("#time").css("display", "none");
+        }
+
+        function hidePopup(){
+            $("body").css("background-color", "#3d3d3d");
+            $("#nmsg1").css("display", "none");
+            $("#nmsg2").css("display", "none");
+            $("#nmsg3").css("display", "none");
+            $("#titlemsg").css("display", "block");
+            $("#date").css("display", "block");
+            $("#time").css("display", "block");
         }
 
         window.onload = function(){
