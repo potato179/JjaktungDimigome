@@ -186,7 +186,7 @@
                 }
                 if(30 <= min*1 && min*1 <= 44){
                     hidePopup();
-                    $("#titlemsg").html("뛰쳐나오고 싶어요");
+                    $("#titlemsg").html("살려주세요");
                 }
                 if(45 <= min*1 && min*1 <= 58){
                     hidePopup();
@@ -221,7 +221,11 @@
                     $("#endTime").html("18:00");
                     $("#timeName").html("자습T4");
                 }
-                if(30 <= min*1 && min*1 <= 58){
+                if(30 <= min*1 && min*1 <= 44){
+                    hidePopup();
+                    $("#titlemsg").html("살려주세요");
+                }
+                if(45 <= min*1 && min*1 <= 58){
                     hidePopup();
                     $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
                 }
