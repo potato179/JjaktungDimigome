@@ -9,7 +9,8 @@
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin = "anonymous">
     <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin = "anonymous"></script>
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity = "sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin = "anonymous"></script>
-    <script src = "https://kit.fontawesome.com/06fb83cb17.js" crossorigin = "anonymous"></script>
+    <script src="https://kit.fontawesome.com/06fb83cb17.js" crossorigin="anonymous"></script>    
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
     <link href = "https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "https://potato179.github.io/style/potato-min.css">
@@ -33,9 +34,8 @@
     <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">즐거운데 즐겁지 않은 토요일!</p>
     <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1><br>
     <div id = "time" class = "time" style = "display: block;">시계</div><br>
-    <h1 class = "white one"></h1>
-    <h1 class = "white rest"></h1>
-    <h1 class = "white two"></h1><br><br>
+    <i class="fa-solid fa-angles-right"></i>
+    <h1 class = "white" style = "display: block;"><span id = "startTime"></span><i class="fa-solid fa-angles-right"></i><span id = "timeName"></span><i class="fa-solid fa-angles-right"></i><span id = "endTime"></span></h1><br><br>
     <h4 class = "white">제작: WP 홍은표</h4>
     <h4 class = "red">본 사이트는 디미고미 사용 시작일인 4월 1일에 운영 종료 예정입니다.</h4>
 
@@ -63,12 +63,16 @@
             dateInfo.getHours()
 
             if(hour*1 === 10){
+                if(min*1 <= 18){
+                    hidePopup();
+                    $("#titlemsg").html("즐겁지 않은 토요일이에요!");
+                }
                 if(min*1 === 19){
                     showPopup();
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
-                if(min*1 === 20){
+                if(19 <= min*1 && min*1 <= 39){
                     hidePopup();
                     $("#titlemsg").html("Wa! 휴식시간!");
                 }
@@ -87,18 +91,16 @@
                 if(min*1 === 44){
                     $("#titlemsg").html("DC 이혜윤 여신아님");
                 }
-                if(min*1 === 45){
+                if(45 <= min*1){
                     $("#titlemsg").html("즐거운 자습시간이에요");
-                }
-            }
-            if(hour*1 === 10){
-                if(min*1 === 30){
-                    $("#titlemsg").html("얘들아 롤 꺼라");
                 }
             }
             if(hour*1 === 11){
                 if(min*1 === 0){
                     $("#titlemsg").html("어쩔티비");
+                }
+                if(10 <= min*1 && min*1 <= 29){
+                    $("#titlemsg").html("얘들아 롤 꺼라");
                 }
                 if(min*1 === 30){
                     $("#titlemsg").html("배고프다");
@@ -110,7 +112,7 @@
                 }
             }
             if(hour*1 === 12){
-                if(min*1 === 0){
+                if(min*1 <= 2){
                     hidePopup();
                     $("#titlemsg").html("Wa! 점심시간!");
                 }
