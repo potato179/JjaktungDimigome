@@ -232,19 +232,10 @@
                 }
             }
             if(hour*1 === 17){
-
+                endTime(18, 0, hour, min)
                 $("#startTime").html("16:20");
                 $("#endTime").html("18:00");
                 $("#timeName").html("자습T4");
-
-                let endHour = 18;
-                let endMin = 0;
-                if(endHour === hour*1){
-                    $("#timeleft").html(endMin - min*1);
-                }
-                else{
-                    $("#timeleft").html(endHour - hour*1 + 60 - min*1);
-                }
                 if(0 <= min*1 && min*1 <= 14){
                     hidePopup();
                     $("#titlemsg").html("아 테스형 세상이 왜이래 왜이렇게 힘들어");
@@ -303,6 +294,16 @@
                 return time;
             }
         }
+
+        function endTime(endHour, endMin, hour, min){
+            if(endHour === hour*1){
+                $("#timeleft").html(endMin - min*1 - 1);
+            }
+            else{
+                $("#timeleft").html(endHour - hour*1 + 60 - min*1 - 1);
+            }
+        }
+
 
         function showPopup(){
             $("body").css("background-color", "blue");
