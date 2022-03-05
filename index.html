@@ -258,7 +258,15 @@
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
             }
-            if(hour*1 === 18){
+            if(hour*1 === 18 || hour*1 === 19){
+                endTime(20, 0, hour, min);
+                $("#startTime").html("18:00");
+                $("#endTime").html("20:00");
+                $("#timeName").html("석식");
+                hidePopup();
+                $("#titlemsg").html("살찌는 저녁시간!");
+            }
+            if(hour*1 === 20){
                 endTime(20, 0, hour, min);
                 $("#startTime").html("18:00");
                 $("#endTime").html("20:00");
