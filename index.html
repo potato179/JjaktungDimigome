@@ -9,7 +9,7 @@
     <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin = "anonymous">
     <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin = "anonymous"></script>
     <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity = "sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin = "anonymous"></script>
-    <script src="https://kit.fontawesome.com/06fb83cb17.js" crossorigin="anonymous"></script>    
+    <script src = "https://kit.fontawesome.com/06fb83cb17.js" crossorigin = "anonymous"></script>
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
     <link href = "https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel = "stylesheet">
@@ -33,9 +33,7 @@
     <p id = "titlemsg" class = "bold yellow" style = "display: block; font-size: 400%;">즐거운데 즐겁지 않은 토요일!</p>
     <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1><br>
     <div id = "time" class = "time" style = "display: block;">시계</div><br>
-    <!--
-    <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span><i class="fa-solid fa-angles-right"></i><span id = "timeName">NNNN</span><i class="fa-solid fa-angles-right"></i><span id = "endTime">EEEE</span></h1><br><br>
-    -->
+    <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">저런.. 중간접속을 해버린 것 같네요.</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1><br><br>
     <h4 class = "white">제작: WP 홍은표</h4>
     <h4 class = "red">본 사이트는 디미고미 사용 시작일인 4월 1일에 운영 종료 예정입니다.</h4>
 
@@ -78,7 +76,7 @@
                 }
                 if(min*1 === 39){
                     showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습2T</span>가 시작됩니다.");
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습T2</span>가 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
                 if(min*1 === 40){
@@ -113,6 +111,9 @@
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>점심시간</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
+                $("#startTime").html("10:40");
+                $("#endTime").html("12:00");
+                $("#timeName").html("자습T2");
             }
             if(hour*1 === 12){
                 if(min*1 <= 2){
@@ -127,16 +128,22 @@
                     hidePopup();
                     $("#titlemsg").html("즐거운 점심시간이에요");
                 }
+                $("#startTime").html("12:00");
+                $("#endTime").html("14:00");
+                $("#timeName").html("점심시간");
             }
             if(hour*1 === 13){
                 if(min*1 === 59){
                     showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습3T</span>가 시작됩니다.");
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습T3</span>가 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
+                $("#startTime").html("12:00");
+                $("#endTime").html("14:00");
+                $("#timeName").html("점심시간");
             }
             if(hour*1 === 14){
-                if(min*1 === 0){
+                if(0 <= min*1){
                     hidePopup();
                     $("#titlemsg").html("즐거운 자습시간이에요");
                 }
@@ -144,6 +151,9 @@
                     hidePopup();
                     $("#titlemsg").html("잠들면 꿈에서 디미충 나옴");
                 }
+                $("#startTime").html("16:00");
+                $("#endTime").html("16:00");
+                $("#timeName").html("자습T3");
             }
             if(hour === 21){
                 if(min === 10){
