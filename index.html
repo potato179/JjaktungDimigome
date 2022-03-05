@@ -63,14 +63,23 @@
             dateInfo.getHours()
 
             if(hour*1 === 10){
-                if(min*1 === 20){
-                    $("#nmsg1").html("<span class = 'yellow'>휴식시간</span>이 시작되었습니다.");
-                    $("#nmsg2").html("감사합니다.");
-                    $("#nmsg3").html("");
+                if(min*1 === 19){
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
                     showPopup();
                 }
-                if(min*1 === 21){
-                    hide();
+                if(min*1 === 20){
+                    $("#titlemsg").html("Wa! 휴식시간!");
+                    hidePopup();
+                }
+                if(min*1 === 39){
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습2T</span>가 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                    showPopup();
+                }
+                if(min*1 === 40){
+                    $("#titlemsg").html("즐거운 자습시간이에요^^");
+                    hidePopup();
                 }
             }
             if(hour === 20){
