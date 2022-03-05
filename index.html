@@ -25,6 +25,7 @@
             color: #e80c7a;
         }
     </style>
+    <meta http-equiv = "refresh" content = "300">
 </head>
 <body style = "background-color: #3d3d3d;">
     <br><br><br><br><br><br>
@@ -133,6 +134,9 @@
                 $("#timeName").html("점심시간");
             }
             if(hour*1 === 13){
+                if(min*1 === 58){
+                    $("#titlemsg").html("문구 변경을 위해 5분 간격으로 새로고침하도록 패치하였습니다.")
+                }
                 if(min*1 === 59){
                     showPopup();
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>자습T3</span>가 시작됩니다.");
