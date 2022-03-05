@@ -265,14 +265,24 @@
                 $("#timeName").html("석식");
                 hidePopup();
                 $("#titlemsg").html("살찌는 저녁시간!");
+                if(min*1 === 59){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>자습5T</span>가 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
             }
             if(hour*1 === 20){
-                endTime(20, 0, hour, min);
-                $("#startTime").html("18:00");
-                $("#endTime").html("20:00");
-                $("#timeName").html("석식");
+                endTime(22, 0, hour, min);
+                $("#startTime").html("20:00");
+                $("#endTime").html("22:00");
+                $("#timeName").html("자습5T");
                 hidePopup();
-                $("#titlemsg").html("살찌는 저녁시간!");
+                $("#titlemsg").html("졸린 자습시간");
+                if(min*1 === 29){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>식사이동</span>이 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
             }
             if(hour === 21){
                 if(min === 10){
@@ -316,7 +326,7 @@
                 $("#timeleft").html(endMin - min*1 - 1);
             }
             else{
-                $("#timeleft").html(endHour - hour*1 + 60 - min*1 - 1);
+                $("#timeleft").html((endHour - hour*1)*60 - min*1 - 1);
             }
         }
 
