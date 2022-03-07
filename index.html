@@ -64,7 +64,38 @@
             document.getElementById("date").innerHTML = timeDisplay;
 
             dateInfo.getHours();
-
+            if(hour*1 === 8){
+                if(35 <= min*1 && min*1 <= 45){
+                    endTime(17, 50, hour, min);
+                    $("#startTime").html("08:35");
+                    $("#endTime").html("08:45");
+                    $("#timeName").html("주번활동");
+                }
+                if(min*1 === 44){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>아침조회</span>가 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+                if(45 <= min*1 && min*1 <= 55){
+                    hidePopup();
+                    endTime(8, 55, hour, min);
+                    $("#startTime").html("08:45");
+                    $("#endTime").html("08:55");
+                    $("#timeName").html("아침조회");
+                }
+                if(min*1 === 54){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>방과후T2</span>가 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+                if(55 <= min*1){
+                    hidePopup();
+                    endTime(18, 35, hour, min);
+                    $("#startTime").html("17:55");
+                    $("#endTime").html("18:35");
+                    $("#timeName").html("방과후T2");
+                }
+            }
             if(hour*1 === 17){
                 if(0 <= min*1 && min*1 <= 49){
                     endTime(17, 50, hour, min);
