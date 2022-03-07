@@ -130,11 +130,12 @@
         }
 
         function endTime(endHour, endMin, hour, min){
+            console.log(endHour, endMin, hour, min)
             if(endHour === hour*1){
                 $("#timeleft").html(endMin - min*1 - 1);
             }
             else{
-                $("#timeleft").html((endHour - hour*1)*60 - min*1 - 1);
+                $("#timeleft").html((endHour - hour*1 + 1)*60 - min*1 - 1);            
             }
         }
 
