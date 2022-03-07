@@ -161,7 +161,8 @@
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
                 if(11 <= min*1 && min*1 <= 30){
-                    endTime(21, 10, hour, min);
+                    hidePopup();
+                    endTime(21, 30, hour, min);
                     $("#startTime").html("21:10");
                     $("#endTime").html("21:30");
                     $("#timeName").html("휴식"); 
