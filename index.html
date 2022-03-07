@@ -160,6 +160,28 @@
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
+                if(11 <= min*1 && min*1 <= 30){
+                    endTime(21, 10, hour, min);
+                    $("#startTime").html("21:10");
+                    $("#endTime").html("21:30");
+                    $("#timeName").html("휴식"); 
+                }
+                if(min*1 === 29){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>야자T2</span>가 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+                if(30 <= min*1){
+                    endTime(21, 10, hour, min);
+                    $("#startTime").html("21:30");
+                    $("#endTime").html("22:00");
+                    $("#timeName").html("야자T2"); 
+                }
+                if(min*1 === 59){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>기숙사 이동</span>이 있겠습니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다. 수고하셨습니다.");
+                }
             }
         }
 
