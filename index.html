@@ -122,7 +122,26 @@
                     $("#timeName").html("석식시간");
                 }
             }
-            
+            if(hour*1 === 19){
+                if(min*1 <= 50){
+                    endTime(19, 50, hour, min);
+                    $("#startTime").html("18:35");
+                    $("#endTime").html("19:10");
+                    $("#timeName").html("석식");
+                }
+                if(min*1 === 49){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>야자T1</span>이 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+                if(50 <= min*1){
+                    hidePopup();
+                    endTime(21, 10, hour, min);
+                    $("#startTime").html("19:50");
+                    $("#endTime").html("21:10");
+                    $("#timeName").html("야자T1");
+                }
+            }
         }
 
         function modifyNumber(time){
