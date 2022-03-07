@@ -85,15 +85,15 @@
                 }
                 if(min*1 === 54){
                     showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>방과후T2</span>가 시작됩니다.");
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
                 if(55 <= min*1){
                     hidePopup();
-                    endTime(18, 35, hour, min);
-                    $("#startTime").html("17:55");
-                    $("#endTime").html("18:35");
-                    $("#timeName").html("방과후T2");
+                    endTime(9, 0, hour, min);
+                    $("#startTime").html("08:55");
+                    $("#endTime").html("09:00");
+                    $("#timeName").html("휴식");
                 }
             }
             if(hour*1 === 17){
