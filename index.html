@@ -70,20 +70,50 @@
                     endTime(17, 50, hour, min);
                     $("#startTime").html("17:10");
                     $("#endTime").html("17:50");
-                    $("#timeName").html("자습T1");
+                    $("#timeName").html("방과후T1");
                 }
                 if(min*1 === 49){
                     showPopup();
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>쉬는시간</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
-                if(50 <= min*1 && min*1 <= 59){
+                if(50 <= min*1 && min*1 <= 54){
                     endTime(18, 0, hour, min);
                     $("#startTime").html("17:50");
-                    $("#endTime").html("18:00");
+                    $("#endTime").html("15:55");
+                    $("#timeName").html("휴식시간");
+                }
+                if(min*1 === 54){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>방과후T2</span>가 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+                if(55 <= min*1){
+                    endTime(18, 35, hour, min);
+                    $("#startTime").html("17:55");
+                    $("#endTime").html("18:35");
                     $("#timeName").html("휴식시간");
                 }
             }
+            if(hour*1 === 18){
+                if(min*1 <= 35){
+                    $("#startTime").html("17:55");
+                    $("#endTime").html("18:35");
+                    $("#timeName").html("방과후T2");
+                }
+                if(min*1 === 34){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>석식시간</span>이 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+                if(35 <= min*1){
+                    endTime(19, 50, hour, min);
+                    $("#startTime").html("18:35");
+                    $("#endTime").html("19:50");
+                    $("#timeName").html("석식시간");
+                }
+            }
+            
         }
 
         function modifyNumber(time){
