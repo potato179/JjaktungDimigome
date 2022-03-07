@@ -148,6 +148,19 @@
                 $("#endTime").html("21:10");
                 $("#timeName").html("야자T1"); 
             }
+            if(hour*1 === 21){
+                if(min*1 <= 10){
+                    endTime(21, 10, hour, min);
+                    $("#startTime").html("19:50");
+                    $("#endTime").html("21:10");
+                    $("#timeName").html("야자T1"); 
+                }
+                if(min*1 === 9){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
+            }
         }
 
         function modifyNumber(time){
