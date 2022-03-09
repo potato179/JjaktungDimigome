@@ -133,6 +133,13 @@
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>자습2T</span>가 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
+                if(40 <= min*1){
+                    hidePopup();
+                    endTime(12, 0, hour, min);
+                    $("#startTime").html("10:40");
+                    $("#endTime").html("12:00");
+                    $("#timeName").html("자습2T");
+                }
             }
             if(hour*1 === 11){
                 if(min*1 <= 50){
