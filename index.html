@@ -142,54 +142,22 @@
                 }
             }
             if(hour*1 === 11){
-                if(min*1 <= 50){
-                    endTime(11, 50, hour, min);
-                    $("#startTime").html("09:00");
-                    $("#endTime").html("09:50");
-                    $("#timeName").html("1교시");
-                }
-                if(min*1 === 49){
+                endTime(12, 0, hour, min);
+                $("#startTime").html("10:40");
+                $("#endTime").html("12:00");
+                $("#timeName").html("자습T2");
+                if(min*1 === 39){
                     showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                if(50 <= min*1 && min*1 <= 55){
-                    hidePopup();
-                    endTime(11, 55, hour, min);
-                    $("#startTime").html("09:50");
-                    $("#endTime").html("10:00");
-                    $("#timeName").html("휴식");
-                }
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>2교시</span>가 시작됩니다.");
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>중식</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
                 }
             }
             if(hour*1 === 12){
-                if(min*1 <= 50){
-                    endTime(12, 50, hour, min);
-                    $("#startTime").html("09:00");
-                    $("#endTime").html("09:50");
-                    $("#timeName").html("1교시");
-                }
-                if(min*1 === 49){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
-                if(50 <= min*1 && min*1 <= 55){
-                    hidePopup();
-                    endTime(12, 55, hour, min);
-                    $("#startTime").html("09:50");
-                    $("#endTime").html("10:00");
-                    $("#timeName").html("휴식");
-                }
-                if(min*1 === 59){
-                    showPopup();
-                    $("#nmsg1").html("잠시후 <span class = 'yellow'>2교시</span>가 시작됩니다.");
-                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
-                }
+                hidePopup();
+                endTime(14, 0, hour, min);
+                $("#startTime").html("12:00");
+                $("#endTime").html("14:00");
+                $("#timeName").html("중식");
             }
             if(hour*1 === 17){
                 if(min*1 === 9){
